@@ -17,6 +17,8 @@
  * under the License.
  */
 
+ favoriteColor = 'rgb(200, 185, 30)';
+ normalColor = 'rgb(34, 38, 42)';
 $(document).ready(function () {
 
 	$('#sidebarCollapse').on('click', function () {
@@ -48,6 +50,21 @@ $(document).ready(function () {
 		loadPage(a);
 	});
 
+	$("#content").on('click', '#check-favorite', function () {
+		var button = $(this);
+		var buttonIcon = $(this.children[0]);
+		if (buttonIcon.hasClass("far")) {
+			buttonIcon.removeClass("far")
+			buttonIcon.addClass("fas")
+			buttonIcon.css("color", favoriteColor)
+		}
+		else
+		{
+			buttonIcon.removeClass("fas")
+			buttonIcon.addClass("far")
+			buttonIcon.removeAttr('style')
+		}
+	});
 	function loadPage(href) {
 		$('#content').empty();
 		//dlaczego nie uzyc po prostu load? zeby mozna bylo wczytywac tylko poszczegolne czesci strony zamiast calosci?
@@ -60,22 +77,6 @@ $(document).ready(function () {
 			}
 		});
 	}
-
-	//zmiana zrodla
-	$("#source1").click(function () {
-		getData = 'smog.json'
-		showPollutionData()
-	});
-
-	$("#source2").click(function () {
-		getData = 'smog2.json'
-		showPollutionData()
-	});
-
-	$("#source3").click(function () {
-		getData = 'smog3.json'
-		showPollutionData()
-	});
 
 });
 

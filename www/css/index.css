@@ -171,6 +171,17 @@ h1 {
   box-shadow: none;
 }
 
+.btn:hover {
+    color: rgb(200, 185, 30);
+    background-color: transparent;
+    box-shadow: none;
+  }
+  
+  .btn:focus {
+    outline:0;
+    box-shadow: none;
+  }
+
 .navbar-dark .navbar-toggler {
     color: rgba(255, 255, 255, 0.5);
     border: none;
@@ -318,16 +329,10 @@ a[data-toggle="collapse"] {
     text-align: right;
 }
 
-.item-favorite {
-    position: absolute;
-    top: 0.5em;
-    right: 1em;
+.item-favorite-detail {
 }
 
-.item-cart-add {
-    position: absolute;
-    top: 0.5em;
-    right: 6em;
+.item-cart-detail {
 }
 
 .container {
