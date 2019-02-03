@@ -330,9 +330,12 @@ a[data-toggle="collapse"] {
 }
 
 .item-favorite-detail {
+    margin-left: auto;
+    margin-right: 1em;
 }
 
-.item-cart-detail {
+.item-cart-add-detail {
+    margin-right: 1em;
 }
 
 .container {
@@ -401,5 +404,14 @@ a[data-toggle="collapse"] {
 
     #overallState {
         width: 40%;
+    }
+
+    .item-favorite-detail {
+        margin-left: auto;
+        margin-right: 0em;
+    }
+    
+    .item-cart-add-detail {
+        margin-right: 5em;
     }
 }
