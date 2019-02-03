@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <!-- Tutaj zmienic 127.0.0.1:8080 na IP aktualnie przydzielone na serwerze, jesli jest on na innym urzadzeniu -->
+    <meta http-equiv="Content-Security-Policy Access-Control-Allow-Origin" content="default-src 'self' http://127.0.0.1:8080 data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Sklepik</title>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-dark bg-black">
+        <button id="sidebarCollapse" class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand mx-auto" href="#">SKLEPIK</a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        </div>
+        <button id="cart" class="navbar-toggler" type="button" data-url="pages/cart.html">
+            <i class="fas fa-shopping-cart fa-lg"></i>
+        </button>
+    </nav>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="navbar-dark bg-dark">
+            <div class="sidebar-components">
+                <p align=center class="sidebar-header py-4 mx-auto sidebar-menu-font">Menu</p>
+                <ul class="list-unstyled components">
+                    <li>
+                        <a href="#" id="list-button" class="btn-sidebar" data-url="pages/lista.html" style="text-decoration: none;">Przeglądaj</a>
+                    </li>
+                    <li>
+                        <a href="#" id="list-button" class="btn-sidebar" data-url="pages/search.html" style="text-decoration: none;">Szukaj</a>
+                    </li>
+                    <li>
+                        <a href="#" id="list-button" class="btn-sidebar" data-url="pages/fav.html" style="text-decoration: none;">Ulubione</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Zawartosc strony ktora reaguje z sidebarem (przesun, wyciemnij itp.) -->
+        <div id="content" class="container-fluid">
+            <div class="col-12 mx-auto">
+                <div id="deviceready">
+                    <div class="blink">
+                        <p></p>
+                        <p class="event listening">Connecting to Device</p>
+                        <p hidden id="successBar" class="event received">Wczytywanie automatyczne co 15s</p>
+                        <p id="aboutBar" class="event received" style="display: none;">TBD</p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+
+</html>
